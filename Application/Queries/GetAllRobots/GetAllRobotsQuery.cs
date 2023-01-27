@@ -8,5 +8,4 @@ using MediatR;
 
 namespace CQRSWithInterface.Application.Queries.GetAllRobots;
 
-public record GetAllRobotsQuery : IQuery<List<Robot>>;
-
+public record GetAllRobotsQuery : IQuery<IEnumerable<Robot>>;
