@@ -1,6 +1,3 @@
-using CQRSWithInterface.Application.Interfaces.Repository;
-using CQRSWithInterface.Models;
-
 namespace CQRSWithInterface.Infrastructure.Persistence.Repositories;
 
 public class RobotRepository : IRobotRepository
@@ -8,7 +5,7 @@ public class RobotRepository : IRobotRepository
     private readonly List<Robot> _robots = new() {
         new(1, "CT-670"),
         new(2, "BBa-Bi-B0U"),
-        new(1, "R0-BRT"),
+        new(3, "R0-BRT"),
     };
 
     public async Task<IEnumerable<Robot>> GetAll()

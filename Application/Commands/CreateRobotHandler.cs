@@ -1,7 +1,3 @@
-using CQRSWithInterface.Application.Interfaces;
-using CQRSWithInterface.Application.Interfaces.Repository;
-using CQRSWithInterface.Models;
-
 namespace CQRSWithInterface.Application.Commands;
 
 public class CreateRobotHandler : ICommandHandler<CreateRobotCommand,Robot>
@@ -13,7 +9,6 @@ public class CreateRobotHandler : ICommandHandler<CreateRobotCommand,Robot>
         _robots = robots;
     }
 
-    public Task<Robot> Handle(CreateRobotCommand request, CancellationToken cancellationToken)
-     => await _robots.Create(new Robot { CodeName = request.CodeName});
-
+    public async Task<Robot> Handle(CreateRobotCommand request, CancellationToken cancellationToken)
+     => await _robots.Create(new Robot(0, request.CodeName));
 }
