@@ -5,6 +5,9 @@ GET {{url}}/robots HTTP/1.1
 ###
 GET {{url}}/robots/1 HTTP/1.1
 
+### EXCEPTION MIDDLEWARE TEST
+GET {{url}}/test/exception HTTP/1.1
+
 ###
 
 POST {{url}}/robots HTTP/1.1

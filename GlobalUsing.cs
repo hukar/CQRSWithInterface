@@ -8,6 +8,8 @@ global using CQRSWithInterface.Infrastructure.Persistence.Repositories;
 
 global using CQRSWithInterface.Models;
 
-global using CQRSWithInterface.API.RobotEndpoints;   
+global using CQRSWithInterface.API.RobotEndpoints; 
+global using CQRSWithInterface.API.Middlewares;
+
 
 global using MediatR;
